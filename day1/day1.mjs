@@ -1,6 +1,6 @@
 import { readFile } from "fs";
 
-readFile("./day1/day1input.txt", (err, data) => {
+readFile("./day1/input.txt", (err, data) => {
   if (err) throw err;
 
   let count = 0;
