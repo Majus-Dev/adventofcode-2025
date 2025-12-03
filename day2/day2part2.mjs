@@ -1,6 +1,6 @@
 import { readFile } from "fs";
 
-readFile("./day2/day2input.txt", (err, data) => {
+readFile("./day2/input.txt", (err, data) => {
   let starttime = Date.now();
   if (err) throw err;
 
