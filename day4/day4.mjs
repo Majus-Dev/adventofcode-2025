@@ -14,24 +14,15 @@ readFile("./day4/input.txt", (err, data) => {
     for (let j = 0; j < rolls[i].length; j++) {
       if (rolls[i][j] == ".") continue;
 
-      let topleft = (rolls[i - 1] ?? "")[j - 1] ?? ".";
-      let topmiddle = (rolls[i - 1] ?? "")[j] ?? ".";
-      let topright = (rolls[i - 1] ?? "")[j + 1] ?? ".";
-      let middleleft = (rolls[i] ?? "")[j - 1] ?? ".";
-      let middleright = (rolls[i] ?? "")[j + 1] ?? ".";
-      let bottomleft = (rolls[i + 1] ?? "")[j - 1] ?? ".";
-      let bottommiddle = (rolls[i + 1] ?? "")[j] ?? ".";
-      let bottomright = (rolls[i + 1] ?? "")[j + 1] ?? ".";
-
       let adjacent = [
-        topleft,
-        topmiddle,
-        topright,
-        middleleft,
-        middleright,
-        bottomleft,
-        bottommiddle,
-        bottomright,
+        (rolls[i - 1] ?? "")[j - 1] ?? ".",
+        (rolls[i - 1] ?? "")[j + 0] ?? ".",
+        (rolls[i - 1] ?? "")[j + 1] ?? ".",
+        (rolls[i + 0] ?? "")[j - 1] ?? ".",
+        (rolls[i + 0] ?? "")[j + 1] ?? ".",
+        (rolls[i + 1] ?? "")[j - 1] ?? ".",
+        (rolls[i + 1] ?? "")[j + 0] ?? ".",
+        (rolls[i + 1] ?? "")[j + 1] ?? ".",
       ];
 
       if (adjacent.filter((a) => a == "@" || a == "x").length < 4) {
