@@ -5,7 +5,7 @@ readFile("./day4/input.txt", (err, data) => {
 
   const rolls = data
     .toString()
-    .split("\r\n")
+    .split("\n")
     .filter((a) => a != "");
   let total = 0;
   let len = rolls.length;
