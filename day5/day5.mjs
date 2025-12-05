@@ -27,5 +27,5 @@ readFile("./day5/input.txt", (err, data) => {
     if (unspoiled) total++;
   }
 
-  console.log(ranges, ingredients, total);
+  console.log(total);
 });
